@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AutoResponder LastSave="2016-09-04T19:07:31.4498001-05:00" FiddlerVersion="4.6.2.3">
+  <State Enabled="true" Fallthrough="true" UseLatency="false">
+    <ResponseRule Match="regex:(?insx)^http://cache-tiles.zune.net/(?'req'.*)" Action="http://localhost/api/${req}" Enabled="true" />
+    <ResponseRule Match="regex:(?insx)^http://socialapi.zune.net/(?'req'.*)" Action="http://localhost/api/${req}" Enabled="true" />
+  </State>
+</AutoResponder>

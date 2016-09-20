@@ -1,0 +1,13 @@
+Header set Cache-Control "max-age=0, private, no-cache, no-store, must-revalidate"
+
+IndexIgnore *
+
+RewriteEngine on
+
+RewriteRule ^(.+)\/members\/([a-zA-Z0-9\ ]+)\/playlists\/BuiltIn-(.+)$ get/playlist.php?user=$2&plist=$3 [NC]
+RewriteRule ^(.+)\/members\/([a-zA-Z0-9\ ]+)$ get/member.php?user=$2 [NC]
+RewriteRule ^tiles\/(user|background)\/([a-zA-Z0-9\ ]+)$ get/graphic.php?type=$1&user=$2 [NC]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^1.0\/(.*)$ index.php [QSA,L]
