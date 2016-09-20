@@ -28,7 +28,7 @@ class config{
         public $databasePassword = '';
         
         //Database name:
-        public $databasename = 'zocial';
+        public $databasename = 'winterbeam';
     
     //Google Webmaster Tools Verification:
     public $GWTver = '';
@@ -79,7 +79,7 @@ header('X-XRDS-Location: ' . $config->domainWiProtocol .
 // Connect to database
 $db = new PDO('mysql:host=' . $config->databasehostname . ';dbname=' . $config->databasename, $config->databaseusername, $config->databasePassword);
 
-// Create a new instance of OAuthStore and OAuthServer
-$store = OAuthStore::instance('PDO', array('conn' => $db));
-$server = new OAuthServer();
+// Create a new instance of OAuthStore and OAuthServer (currently not setup)
+//$store = OAuthStore::instance('PDO', array('conn' => $db));
+//$server = new OAuthServer();
 ?>
